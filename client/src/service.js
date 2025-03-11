@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiUrl = "http://localhost:5068"
-axios.defaults.baseURL = 'http://localhost:5068';
+const apiUrl = process.env.REACT_APP_API_URL;
+axios.defaults.baseURL = process.env.REACT_APP_API_URL;
 axios.defaults.headers.common['Content-Type'] = 'application/x-www-form-urlencoded';
 axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
