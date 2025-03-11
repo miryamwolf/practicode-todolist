@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "OnD/fZSlddM=",
+  "dgSpecHash": "uku4dsxMXW8=",
   "success": true,
-  "projectFilePath": "C:\\מרים מסלול\\פרקטיקוד\\פרקטיקוד 3\\TodoApi\\TodoApi.csproj",
+  "projectFilePath": "C:\\Users\\מרים\\Documents\\ToDoListReact-master\\practicode-todolist\\server\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\מרים\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\מרים\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
