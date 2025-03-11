@@ -25,12 +25,12 @@ builder.Services.AddDbContext<ToDoDbContext>(options =>
 var app = builder.Build();
 
 app.UseCors("MyPolicy");
-if (app.Environment.IsDevelopment())
-{
+// if (app.Environment.IsDevelopment())
+// {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
-app.MapGet("/", async (ToDoDbContext db) =>
+// }
+app.MapGet("/tasks", async (ToDoDbContext db) =>
 {
     return await db.Items.ToListAsync();
 });
@@ -73,4 +73,5 @@ app.MapPut("/put/{id}",async(ToDoDbContext db,int id,Item item)=>
 
     return "delete";
 });
+app.MapGet("/",()=>"server is running!");
 app.Run();
