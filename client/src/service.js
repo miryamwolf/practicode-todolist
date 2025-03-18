@@ -26,11 +26,11 @@ export default {
   addTask: async(item)=>{
     
     console.log('addTask', item)
-    await axios.post(`${apiUrl}/add`,{item},{
+    const r=await axios.post(`${apiUrl}/add`,item,{
     headers: {
         'Content-Type': 'application/json'
     }})
-return {};
+return r.data;
 },
 
   setCompleted: async(id, isComplete)=>{
