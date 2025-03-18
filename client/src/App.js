@@ -14,7 +14,7 @@ function App() {
     e.preventDefault();
     await service.addTask(newTodo);
     setNewTodo("");//clear input
-    await getTodos();//refresh tasks list (in order to see the new one)
+    await service.getTasks();//refresh tasks list (in order to see the new one)
   }
 
   async function updateCompleted(todo, isComplete) {
