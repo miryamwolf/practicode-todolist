@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TodoApi;
 
@@ -35,8 +36,11 @@ app.MapGet("/tasks", async (ToDoDbContext db) =>
     return await db.Items.ToListAsync();
 });
 
-app.MapPost("/add", async(ToDoDbContext db, Item item) =>{
-    item.IsComplete=false;
+app.MapPost("/add", async(ToDoDbContext db, [FromBody] string name) =>{
+    Item item =new(){
+        Name=name,
+        IsComplete=false
+    };
 await db.Items.AddAsync(item);
 db.SaveChanges();
 return "added success!";
